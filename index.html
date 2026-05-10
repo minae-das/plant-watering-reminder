@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Plant Watering Reminder</title>
+    <style>
+      body{font-family:system-ui,Arial;padding:20px;max-width:900px;margin:auto}
+      form{margin-bottom:1rem}
+      label{display:block;margin:.25rem 0}
+      .card{border:1px solid #ddd;padding:.5rem;margin-bottom:.5rem}
+    </style>
+  </head>
+  <body>
+    <h1>Plant Watering Reminder</h1>
+
+    <section>
+      <h2>Add Plant</h2>
+      <form id="plantForm">
+        <input name="name" placeholder="Plant name" required>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Schedule Watering</h2>
+      <form id="schedForm">
+        <select id="plantSelect" name="plantId"></select>
+        <input name="frequencyDays" type="number" min="1" value="7" required>
+        <input name="timeOfDay" type="time" required>
+        <button type="submit">Schedule</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Water Now</h2>
+      <form id="waterForm">
+        <select id="plantSelect2" name="plantId"></select>
+        <input name="note" placeholder="Note (optional)">
+        <button type="submit">Log Watering</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Upcoming / Logs</h2>
+      <div id="lists"></div>
+    </section>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
